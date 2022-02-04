@@ -1,2 +1,4 @@
 # Two-Factor Authentication
 Two-factor user authentication using both hashed password and OTP, which after successful login provides the user with a cookie containing a JWT token. Basic user management using a SQLite database. Contains two endpoints: `/login` and `/register`, which expect `username` and `password` as paramaters. For users with two-factor authentication, additional `otp` parameter with a time-based one-time-password is mandatory. When creating a new user using the `/register` end-point, use the parameter `otp` equals True for generating a random base-32 token. After each request, the response body will contain a json with a 'success' key that will be either True or Flase. For a successful request using the `/login` end-point, a signed JWT will be assigned using Set-Cookie header.
+
+<img width="804" alt="users.db" src="https://user-images.githubusercontent.com/92688410/152570614-184d8e8e-559d-4fa4-a00a-7e2ef5c416d7.png">
